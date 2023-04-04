@@ -42,6 +42,14 @@ public class TicketService {
         //Also in the passenger Entity change the attribute bookedTickets by using the attribute bookingPersonId.
        //And the end return the ticketId that has come from db
 
+        Passenger passenger;
+        try{
+            passenger = passengerRepository.findById(bookTicketEntryDto.getBookingPersonId()).get();
+        }
+        catch (Exception e){
+            throw new Exception("Passenger not found");
+        }
+
        return null;
 
     }
