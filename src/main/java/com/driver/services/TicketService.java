@@ -40,7 +40,7 @@ public class TicketService {
         //throw new Exception("Invalid stations");
         //Save the bookedTickets in the train Object
         //Also in the passenger Entity change the attribute bookedTickets by using the attribute bookingPersonId.
-       //And the end return the ticketId that has come from db
+        //And the end return the ticketId that has come from db
 
         Train train=trainRepository.findById(bookTicketEntryDto.getTrainId()).get();
         int bookedSeats=0;
